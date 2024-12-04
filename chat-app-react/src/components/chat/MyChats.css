@@ -1,0 +1,86 @@
+.my-chats-container {
+    padding: 10px;
+    background-color: rgba(25, 25, 25, 0.9); /* Dark background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    max-height: 92%; /* Set a maximum height for the chat container */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.chat-item {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    padding: 5px; /* Reduced padding for a more compact look */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 5px; /* Reduced space between chat items */
+    color: #ffffff; /* White text */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    cursor: pointer; /* Pointer cursor on hover */
+    background: linear-gradient(
+        135deg,
+        #2a2a2a 0%,
+        #2d2d2d 50%,
+        #1f1f1f 100%
+    );
+}
+
+.chat-item:hover {
+    background: linear-gradient(135deg, rgba(196, 181, 253, 0.7), rgba(79, 70, 229, 0.7)); /* Darker purple gradient on hover */
+}
+
+.profile-pic {
+    width: 20px; /* Set width for profile picture */
+    height: 20px; /* Set height for profile picture */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column; /* Stack username and bio */
+}
+
+.active-chat {
+    border-left: 4px solid #fff; /* Purple left border for active chat */
+    background: linear-gradient(
+        to right,
+        #4f46e5,
+        #6366f1,
+        #4f46e5
+    );
+}
+
+.group-icon {
+    font-size: 40px; /* Adjust size to match profile picture */
+    color: #6366f1; /* Set color to match your theme */
+    margin-right: 10px; /* Space between icon and text */
+    width: 50px; /* Set width to match profile picture */
+    height: 50px; /* Set height to match profile picture */
+    display: flex; /* Use flex to center the icon */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Custom scrollbar styles for webkit browsers (Chrome, Safari) */
+.my-chats-container::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+.my-chats-container::-webkit-scrollbar-track {
+    background: #1f1f1f; /* Background of the scrollbar track */
+}
+
+.my-chats-container::-webkit-scrollbar-thumb {
+    background: #6366f1; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+.my-chats-container::-webkit-scrollbar-thumb:hover {
+    background: #4f46e5; /* Darker purple on hover */
+}
+
+/* Custom scrollbar styles for Firefox */
+.my-chats-container {
+    scrollbar-width: thin; /* Use a thin scrollbar */
+    scrollbar-color: #6366f1 #1f1f1f; /* Thumb color and track color */
+}

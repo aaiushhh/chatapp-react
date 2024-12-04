@@ -1,0 +1,183 @@
+.create-group-container {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 92vh; /* Full height of the viewport */
+    padding: 20px; /* Padding for the container */
+    background-color: #1c1c1c; /* Dark background for the container */
+    border-radius: 12px; /* Rounded corners */
+    color: white; /* White text */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.header-section {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.station-title {
+    font-size: 2.5rem; /* Increased font size for the heading */
+    font-weight: bold; /* Bold text */
+    color: #ffffff; /* White text color */
+    margin-left: 10px; /* Space between icon and heading */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Subtle shadow for depth */
+    letter-spacing: 1px; /* Slightly increase space between letters */
+}
+
+.icon-header {
+    font-size: 5rem; /* Increase icon size to match heading */
+    color: #6366f1; /* Optional: Change icon color to match your theme */
+}
+
+.create-group-form {
+    background-color: #2a2a2a; /* Darker background for the form */
+    padding: 20px; /* Padding for the form */
+    border-radius: 12px; /* Rounded corners */
+    width: 100%; /* Full width for the form */
+    max-width: 400px; /* Max width for the form */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Shadow for the form */
+}
+
+.form-field {
+    margin-bottom: 15px; /* Space between form groups */
+    width: 100%; /* Full width for form groups */
+}
+
+label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Bold labels for emphasis */
+}
+
+input {
+    width: 100%; /* Full width for inputs */
+    padding: 12px; /* Padding for inputs */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #444; /* Dark background for inputs */
+    color: white; /* White text */
+    font-size: 1rem; /* Font size */
+    transition: background 0.3s ease; /* Smooth transition */
+}
+
+input:focus {
+    outline: none; /* Remove default outline */
+    background-color: #555; /* Slightly lighter background on focus */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Add a subtle white shadow on focus */
+}
+
+.submit-button {
+    width: 100%; /* Full width for submit button */
+    padding: 12px; /* Padding for the button */
+    background: linear-gradient(135deg, #4f46e5, #6366f1); /* Purple gradient */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1.2rem; /* Increased font size for elegance */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-button:hover {
+    background: linear-gradient(135deg, #6366f1, #4f46e5); /* Lighter purple on hover */
+    transform: translateY(-2px); /* Slightly lift the button */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.back-button {
+    padding: 15px;
+    background: linear-gradient(
+        135deg,
+        #2a2a2a 0%,
+        #2d2d2d 50%,
+        #1f1f1f 100%
+    );
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1.2rem; /* Font size */
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 15px; /* Space above the button */
+}
+
+.back-button:hover {
+    background: linear-gradient(
+      135deg,
+      #323232 0%,
+      #353535 50%,
+      #272727 100%
+  );
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.back-button:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Add a subtle white shadow on focus */
+}
+/* User Result Styles */
+.group-create-user-result {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    background-color: rgba(255, 255, 255, 0.1); /* Card background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside the card */
+    margin-bottom: 10px; /* Space between cards */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.group-create-user-result:hover{
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    /* background-color: rgba(255, 255, 255, 0.2); Change background color on hover */
+    background: linear-gradient(
+        to right,
+        #4f46e5,
+        #6366f1,
+        #4f46e5
+    );
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.group-create-profile-pic {
+    width: 40px; /* Set width for profile picture */
+    height: 40px; /* Set height for profile picture */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.group-create-user-info {
+    color: white; /* White text for user info */
+}
+
+.selected-users {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    margin: 10px 0; /* Space above and below the selected users */
+}
+
+.selected-user {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    background-color: #6366f1; /* Background color for selected user */
+    border-radius: 8px; /* Rounded corners */
+    padding: 5px 10px; /* Padding for the selected user */
+    margin-right: 10px; /* Space between selected users */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+    margin-bottom: 2px;
+}
+
+.selected-user:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Change background on hover */
+}
+.selected-user p{
+    margin-right: 3px;
+   
+}

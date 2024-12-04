@@ -1,0 +1,227 @@
+.settings-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 92vh;
+    background: linear-gradient(
+    135deg,
+    #050505 0%,
+    #0a0a0a 50%,
+    #050505 100%
+  );
+    color: #ffffff;
+    position: relative;
+}
+
+.settings-form {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(25, 25, 25, 0.9);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.settings-form:hover {
+    transform: scale(1.02);
+}
+
+.settings-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    /* color: #4f46e5; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.profile-pic-label {
+    cursor: pointer;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(124, 58, 237, 0.5);
+}
+
+textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+.profile-pic-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(124, 58, 237, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.profile-pic-placeholder {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+input[type="file"] + label {
+    cursor: pointer;
+    color: #4f46e5;
+    text-decoration: underline;
+}
+
+.save-button {
+    width: 100%;
+  padding: clamp(0.75rem, 2.5vw, 1rem);
+  /* Premium gradient background */
+  background: linear-gradient(
+      135deg,
+      #2a2a2a 0%,
+      #2d2d2d 50%,
+      #1f1f1f 100%
+  );
+  color: #ffffff;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  font-size: clamp(0.875rem, 3vw, 1rem);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.save-button:hover {
+    background: linear-gradient(
+      135deg,
+      #323232 0%,
+      #353535 50%,
+      #272727 100%
+  );
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-color: #444444;
+}
+
+.save-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Optional: Add subtle shine effect */
+  .save-button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.03) 30%,
+        transparent 100%
+    );
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+  }
+  
+  .save-button:hover::after {
+    animation: shine 1.5s ease;
+  }
+  
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) rotate(45deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(45deg);
+    }
+  }
+
+.logout-button {
+    width: 100%;
+    padding: clamp(0.75rem, 2.5vw, 1rem);
+    background: linear-gradient(
+        135deg,
+        #c0392b 0%,
+        #e74c3c 50%,
+        #a93226 100%
+    );
+    color: #ffffff;
+    border: 1px solid #a93226;
+    border-radius: 6px;
+    font-size: clamp(0.875rem, 3vw, 1rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button:hover {
+    background: linear-gradient(
+        135deg,
+        #b03a2e 0%,
+        #c0392b 50%,
+        #922b21 100%
+    );
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-color: #922b21;
+}
+
+.logout-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

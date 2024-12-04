@@ -1,0 +1,197 @@
+.login-container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.app-name {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    width: min(90%, 400px);
+    height: auto;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.login-form-wrapper {
+    background-color: #191919;
+    padding: clamp(1rem, 4vw, 2rem);
+    border-radius: 8px;
+    width: min(90%, 400px);
+    height: auto;
+    min-height: 200px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.login-title {
+    color: #fff;
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: clamp(1rem, 4vw, 1.5rem);
+}
+
+.form-group {
+    margin-bottom: clamp(0.75rem, 3vw, 1.25rem);
+}
+
+.form-input {
+    width: 100%;
+    padding: clamp(0.5rem, 2vw, 0.75rem);
+    background-color: #1e1f22;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    color: #dcddde;
+    font-size: clamp(0.875rem, 3vw, 1rem);
+    transition: all 0.2s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #5865f2;
+    box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.2);
+}
+
+.form-input::placeholder {
+    color: #72767d;
+    opacity: 0.8;
+}
+
+.submit-button {
+    width: 100%;
+    padding: clamp(0.75rem, 2.5vw, 1rem);
+    /* Premium gradient background */
+    background: linear-gradient(
+        135deg,
+        #2a2a2a 0%,
+        #2d2d2d 50%,
+        #1f1f1f 100%
+    );
+    color: #ffffff;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    font-size: clamp(0.875rem, 3vw, 1rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:hover {
+    background: linear-gradient(
+        135deg,
+        #323232 0%,
+        #353535 50%,
+        #272727 100%
+    );
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-color: #444444;
+}
+
+.submit-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Add subtle shine effect */
+.submit-button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.03) 30%,
+        transparent 100%
+    );
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover::after {
+    animation: shine 1.5s ease;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+.signup-link {
+    margin-top: clamp(1rem, 4vw, 1.25rem);
+    text-align: center;
+    color: #72767d;
+    font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+}
+
+.signup-link a {
+    color: #00a8fc;
+    text-decoration: none;
+    padding: 0.25rem;
+    transition: color 0.2s ease;
+}
+
+.signup-link a:hover {
+    color: #1da1f2;
+    text-decoration: underline;
+}
+
+.error-text {
+    color: #ed4245;
+    font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+    margin-top: 0.5rem;
+    padding: 0.25rem 0;
+}
+
+:root {
+    --toastify-color-dark: #18191c;
+    --toastify-color-success: #23a559;
+    --toastify-color-error: #ed4245;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .login-form-wrapper {
+        margin: 1rem 0;
+    }
+}
+
+@media (hover: none) {
+    .submit-button {
+        padding: clamp(0.875rem, 3vw, 1.125rem);
+    }
+
+    .signup-link a {
+        padding: 0.5rem;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .form-input {
+        font-size: 16px;
+    }
+}

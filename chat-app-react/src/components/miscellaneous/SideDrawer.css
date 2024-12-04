@@ -1,0 +1,73 @@
+.side-drawer {
+    padding: 20px;
+    background-color: rgba(25, 25, 25, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+.user-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.user-card {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    background-color: rgba(255, 255, 255, 0.1); /* Card background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside the card */
+    margin-bottom: 10px; /* Space between cards */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.user-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    /* background-color: rgba(255, 255, 255, 0.2); Change background color on hover */
+    background: linear-gradient(
+        to right,
+        #4f46e5,
+        #6366f1,
+        #4f46e5
+    );
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Add a more pronounced shadow on hover */
+}
+
+.profile-pic {
+    width: 50px; /* Set width for profile picture */
+    height: 50px; /* Set height for profile picture */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.user-info {
+    flex-grow: 1; /* Allow text to take remaining space */
+}
+
+.user-info h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.2rem; /* Font size for username */
+}
+
+.user-info p {
+    margin: 5px 0 0; /* Margin for bio */
+    font-size: 0.9rem; /* Font size for bio */
+    color: #cccccc; /* Lighter color for bio */
+}
+
+/* Add this CSS for the loading spinner */
+.loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3); /* Light border */
+    border-top: 4px solid #C4B5FD; /* Purple border */
+    border-radius: 50%; /* Circular shape */
+    width: 30px; /* Width of the spinner */
+    height: 30px; /* Height of the spinner */
+    animation: spin 1s linear infinite; /* Spin animation */
+    margin: 0 auto; /* Center the spinner */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

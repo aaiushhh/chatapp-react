@@ -1,0 +1,259 @@
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8dvh;
+    width: 100dvw;
+    background: #0f0f0f;
+    padding: 0;
+    position: relative;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.15);
+    
+}
+
+.navbar-profile-pic {
+    width: 45px; /* Adjust size as needed */
+    height: 45px; /* Adjust size as needed */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image covers the area */
+    margin-right: 8px; /* Space between the image and username */
+    border: 2px solid #94a3b8;
+}
+
+.navbar-left{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+    padding: 0 1.5rem;
+    width: 30%;
+}
+
+.navbar-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+}
+
+.navbar-title{
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    background: linear-gradient(
+        135deg, 
+        #ffffff 0%,
+        #a8a8a8 50%,
+        #ffffff 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    
+}
+
+.navbar-title:hover{
+    filter: brightness(1.2);
+    transform: scale(1.02);
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1rem;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-item:hover{
+    color: #ffffff;
+    background: rgba(99, 102, 241, 0.1);
+    transform: translateY(-1px);
+}
+
+.nav-item.active{
+    color: #ffffff;
+    background: rgba(99, 102, 241, 0.15);
+}
+
+.nav-item.active::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        #4f46e5,
+        #6366f1,
+        #4f46e5
+    );
+}
+
+.nav-item svg{
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover svg{
+    transform: scale(1.1);
+}
+
+.app-name-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    height: 100%;
+    width: 30%;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(15, 15, 15, 0.95)
+    );
+}
+
+.username-display{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.username {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.bio {
+    font-size: 0.75rem;
+    color: #a0a0a0;
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.settings-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    color: #94a3b8;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+    background: rgba(99, 102, 241, 0.1);
+}
+
+.settings-button:hover{
+    color: #ffffff;
+    background: rgba(99, 102, 241, 0.2);
+    transform: rotate(15deg);
+}
+
+.settings-button svg{
+    font-size: 1.3rem;
+}
+
+.nav-item.active:hover::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(99, 102, 241, 0.2),
+        transparent 70%
+    );
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+    50%{
+        transform: scale(1.05);
+        opacity: 0.3;
+    }
+    100%{
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 768px){
+    .navbar-left{
+        width: 35%;
+        padding: 0 1rem;
+    }
+    
+    .navbar-center{
+        width: 30%;
+    }
+    
+    .navbar-title{
+        font-size: 1.4rem;
+    }
+    
+    .app-name-container{
+        width: 35%;
+        padding: 0 1rem;
+    }
+    
+    .nav-item span,
+    .username-display span{
+        display: none;
+    }
+}
+
+@media (max-width: 480px){
+    .navbar-left{
+        width: 40%;
+    }
+    
+    .navbar-center{
+        width: 20%;
+    }
+    
+    .navbar-title{
+        display: none;
+    }
+    
+    .app-name-container{
+        width: 40%;
+    }
+}
+
+* {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

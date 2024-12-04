@@ -1,0 +1,25 @@
+services:
+  backend:
+    image: eyushh/chat-app-backend:latest
+    ports:
+      - "3000:3000"
+    environment:
+      MONGO_URI: mongodb://mongo:27017/chat-app
+    depends_on:
+      - mongo
+
+  frontend:
+    image: eyushh/chat-app-frontend:latest
+    ports:
+      - "5173:5173"
+
+  mongo:
+    image: mongo:6.0
+    container_name: mongo
+    ports:
+      - "27017:27017" # Expose MongoDB on localhost
+    volumes:
+      - mongo-data:/data/db #backup and external
+
+volumes:
+  mongo-data:
