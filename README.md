@@ -120,8 +120,8 @@ Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more informati
 ## 📫 Contact
 
 **Aayush Srivastava**  
-🌐 [Portfolio](https://aaiushhh.github.io)  
-📧 aayushsrivastava.dev@gmail.com  
+🌐 [Portfolio](https://eyushhfportfolio.netlify.app/)  
+📧 eyushhonhisway@gmail.com  
 🐙 GitHub: [@aaiushhh](https://github.com/aaiushhh)
 
 ---
